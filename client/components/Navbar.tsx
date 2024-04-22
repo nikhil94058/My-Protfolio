@@ -1,16 +1,16 @@
-import React from 'react'
-import NavC from './NavC'
+import React from 'react';
+import NavC from './NavC';
 
 const Navbar = () => {
   return (
-   <div className="w-[1024px] h-[60px] justify-start items-start gap-[71px] inline-flex ml-[300px] mt-[50px]">
-    <NavC name = "Contact" />
-    <NavC name = "Resume" />
-    <NavC name= "About" />
-    <NavC name="Certificate" />
-    <NavC name="Projects" />
-   </div>
-  )
-}
+    <div className="flex flex-col md:flex-row md:items-center md:justify-center md: space-x-10 md: m-4">
+      <a href="/"><NavC name="Contact"  /></a>
+      <a href="/resume.pdf" download="resume.pdf" target='_blank'><NavC name="Resume" /></a>
+      <a href="/"><NavC name="About" /></a>
+      <a href="/"><NavC name="Certificate" /></a>
+      <a href="/"><NavC name="Projects" /></a>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;
