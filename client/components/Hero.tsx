@@ -4,6 +4,7 @@ import NavC from './NavC'
 import Typewriter from 'typewriter-effect'; 
 import mongo from '@/public/mongo.svg'
 import Footer from './Footer';
+import About from './About';
 const Hero = () => {
   return (
     <div>
@@ -46,7 +47,11 @@ const Hero = () => {
  <button><NavC name = "Learn more" /></button>
   <button><NavC name = "Contact me" /></button>
  </div>
-{/*Place For Footer*/ }
+ <br />
+ <br />
+ <br />
+<div className='w-screen h-6 bg-black'></div>
+<div className='ml-[200px] mt-[100px]'><About /></div>
 </div>
 
       </center>

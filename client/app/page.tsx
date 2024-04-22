@@ -19,7 +19,7 @@ export default function Home() {
     <div >
       <Navbar />
       <div className="flex space-between m-9 p-3">
-      <div className="animate-pulse "><Hero /></div>
+      <div className=" "><Hero /></div>
      
       <motion.div
     initial={{ opacity: 0, scale: 0.5 }}
