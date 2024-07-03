@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card1 = ({ comment, name, role, location }) => {
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+    <div className="dark:bg-gray-800 bg-white rounded-lg overflow-hidden shadow-lg p-6 transform hover:scale-105 transition-transform duration-300 ease-in-out">
       <div className="flex items-center gap-4">
         <img className="w-12 h-12 rounded-full" src="https://via.placeholder.com/50x50" alt="Avatar" />
         <div className="flex flex-col">

@@ -62,9 +62,11 @@ const Testimonial = ({ comments }) => {
             Feel free to contact me or just say a friendly hello!
           </div>
         </div>
-        <button className="py-2 px-4 bg-green-700 text-white text-lg font-bold font-inter rounded-lg">
+        <a href="/contact">
+        <button className="py-2 px-4 bg-green-700 text-white text-lg font-bold font-inter rounded-lg" >
           Contact Me
         </button>
+        </a>
       </div>
     </div>
   );

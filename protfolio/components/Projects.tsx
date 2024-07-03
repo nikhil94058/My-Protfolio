@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
-import Card from './Card'; // Import the Card component
+import ProjectCard from './ProjectCard';
 
 const projects = [
   {
     title: 'Project 1',
     description: 'Description for project 1',
+    event: 'Hackathon 2021',
+    techStacks: ['React', 'Node.js', 'MongoDB'],
+    imgUrl: 'https://via.placeholder.com/600x400',
+    projectLink: '#',
   },
   {
     title: 'Project 2',
     description: 'Description for project 2',
-  },
-  {
-    title: 'Project 3',
-    description: 'Description for project 3',
-  },
-  {
-    title: 'Project 4',
-    description: 'Description for project 4',
+    event: 'Conference 2020',
+    techStacks: ['Angular', 'Firebase'],
+    imgUrl: 'https://via.placeholder.com/600x400',
+    projectLink: '#',
   },
   // Add more projects here
 ];
@@ -47,28 +47,52 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className='bg-zinc-800 py-8'
+      className="relative dark:bg-zinc-800 bg-gray-300 py-8"
       style={{ opacity }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center mb-8">
+      <div className="absolute inset-0 z-0 flex justify-center items-center">
+        <div
+          className="backdrop-blur-[20px]" // Adjust the blur intensity as needed
+          style={{
+            width: 642,
+            height: 720,
+            background: 'radial-gradient(100% 100% at 50% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%)',
+            borderRadius: '50%',
+            opacity: 0.5,
+          }}
+        />
+      </div>
+      <div className="max-w-7xl z-10 mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-[2px] bg-green-700"></div>
-              <div className="text-green-700 text-xl font-bold font-inter">Recent Work</div>
+              <div className="w-8 h-[2px] dark:bg-green-700 bg-gray-800"></div>
+              <div className="dark:text-green-700 text-gray-800 text-xl font-bold">Recent Work</div>
             </div>
-            <div className="text-white text-4xl font-bold font-inter leading-12">Some of my favorite projects.</div>
+            <h2 className="text-white text-4xl font-bold leading-tight">
+              Some of my favorite projects.
+            </h2>
           </div>
-          <a href="#" className="px-4 py-2.5 border border-green-700 flex items-center gap-2.5">
-            <div className="text-white text-sm font-bold font-inter leading-6">View All Projects</div>
+          <a href="#" className="mt-4 md:mt-0 px-4 py-2.5 border bg-gray-600 dark:border-green-700 flex items-center gap-2.5">
+            <div className="dark:text-white text-gray-800 text-sm font-bold">View All Projects</div>
           </a>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col justify-center gap-12 m-10">
           {projects.map((project, index) => (
-            <Card key={index} role={project.title} des={project.description} borderColor={borderColor} />
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              event={project.event}
+              techStacks={project.techStacks}
+              imgUrl={project.imgUrl}
+              projectLink={project.projectLink}
+              ind={index}
+              borderColor={borderColor}
+            />
           ))}
         </div>
       </div>

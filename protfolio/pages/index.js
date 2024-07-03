@@ -1,6 +1,5 @@
-// pages/index.js
+import MainPage from './MainPage';
 
-import HomePage from './HomePage';
-
-
-export default HomePage;
+export default function Home() {
+  return <MainPage />;
+}
