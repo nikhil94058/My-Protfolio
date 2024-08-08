@@ -1,6 +1,6 @@
 export const certificates = [
   {
-    title: 'Certificate 1',
+    title: 'GDSC Solution Challenge ',
     image: '/cer1.png',
     datatype: 'cerr',
     description: 'Certified in something awesome!',
@@ -15,7 +15,7 @@ export const certificates = [
     title: 'LandSol',
     image: '/landsol.png',
     datatype: 'proj',
-    description: 'Transforming landscapes with cutting-edge technology.',
+    description: 'Created a transparent solution for land related dispustes.',
     link: 'https://client-qg2g8nmxj-nikhils-projects-e64f0fae.vercel.app/login',
   },
   {

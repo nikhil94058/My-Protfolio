@@ -19,18 +19,18 @@ const Testimonial = ({ comments }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
       <div className="flex items-center gap-2 mb-8">
-        <div className="w-2 h-8 bg-green-700 rounded-full"></div>
-        <div className="text-white text-2xl md:text-4xl font-bold font-inter leading-12">My Happy Clients</div>
+      {/* <div className="w-2 h-8 bg-green-700 rounded-full"></div>*/}
+        {/*<div className="text-white text-2xl md:text-4xl font-bold font-inter leading-12">My Happy Clients</div>*/}
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1">
+      {/*<div className="grid grid-cols-1 gap-4 md:grid-cols-1 lg:grid-cols-1">
         {currentComments.map((comment, index) => (
           <Card1 key={index} comment={comment.comment} name={comment.name} role={comment.roles} location={comment.location} />
         ))}
-      </div>
+      </div>*/}
 
       {/* Pagination */}
-      <div className="flex justify-center mt-8">
+      {/*<div className="flex justify-center mt-8">
         {comments.length > itemsPerPage && (
           <div className="flex gap-2 md:gap-4">
             {[...Array(Math.ceil(comments.length / itemsPerPage)).keys()].map((number, index) => (
@@ -44,7 +44,7 @@ const Testimonial = ({ comments }) => {
             ))}
           </div>
         )}
-      </div>
+      </div>*/}
 
       {/* Scroll to top button */}
       <div

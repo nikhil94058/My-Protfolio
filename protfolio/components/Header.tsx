@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef  } from 'react';
 import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import clickSound from './click.mp3';
-
+import clickSound from '../static/media/click.wav';
+import { Toaster, toast } from 'sonner'
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const audioRef = useRef(null);
+  
   useEffect(() => {
-    if (darkMode) {
+    if (!darkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
   }, [darkMode]);
-
+  
   const playSound = () => {
-    const audio = new Audio(clickSound);
-    audio.play();
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
   };
 
   const buttonVariants = {
@@ -53,6 +55,7 @@ const Header = () => {
               className='hover:text-gray-400 transform transition duration-300' 
               variants={linkVariants}
               whileHover="hover"
+              onClick={playSound}
             >
               About
             </motion.a>
@@ -61,6 +64,7 @@ const Header = () => {
               className='hover:text-gray-400 transform transition duration-300' 
               variants={linkVariants}
               whileHover="hover"
+              onClick={playSound}
             >
               Projects
             </motion.a>
@@ -69,18 +73,23 @@ const Header = () => {
               className='hover:text-gray-400 transform transition duration-300' 
               variants={linkVariants}
               whileHover="hover"
+              onClick={playSound}
             >
               Contact
             </motion.a>
           </nav>
           <motion.button
-            onClick={() => { setDarkMode(!darkMode); playSound(); }}
+            onClick={() => { setDarkMode(!darkMode); playSound();
+              toast(!darkMode ? 'DarkMode' : 'LightMode');
+             }}
+            
             className='ml-4 p-2 rounded bg-gray-700 hover:bg-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none'
             variants={buttonVariants}
             whileHover="hover"
           >
             {darkMode ? <FaSun className='text-yellow-500' /> : <FaMoon className='text-gray-300' />}
           </motion.button>
+          <Toaster />
         </div>
         <div className='md:hidden flex items-center'>
           <motion.button 

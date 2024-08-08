@@ -4,19 +4,19 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'Description for project 1',
-    event: 'Hackathon 2021',
-    techStacks: ['React', 'Node.js', 'MongoDB'],
-    imgUrl: 'https://via.placeholder.com/600x400',
-    projectLink: '#',
+    title: 'LandSol',
+    description: 'Created a transparent solution for land related dispustes.',
+    event: "HackoFest' 23",
+    techStacks: ['React', 'Node', 'mongodb, Solidity'],
+    imgUrl: '/landsol.png',
+    projectLink: 'https://client-qg2g8nmxj-nikhils-projects-e64f0fae.vercel.app/login',
   },
   {
-    title: 'Project 2',
-    description: 'Description for project 2',
-    event: 'Conference 2020',
-    techStacks: ['Angular', 'Firebase'],
-    imgUrl: 'https://via.placeholder.com/600x400',
+    title: 'Medicare Health++',
+    description: 'Stores Patient History which will aids the doctor for treatment.',
+    event: 'GDSC Solution Challenge',
+    techStacks: ['React', 'Firebase'],
+    imgUrl: '/medicust.png',
     projectLink: '#',
   },
   // Add more projects here
