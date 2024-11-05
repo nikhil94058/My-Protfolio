@@ -26,12 +26,8 @@ const ProjectCard = ({ title, description, event, techStacks, imgUrl, projectLin
         <p className="text-lg text-indigo-200">{description}</p>
         <div className="flex gap-2 mt-4">
           {techStacks.map((stack, index) => (
-            <div key={index} className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center">
-              <img
-                src={`https://raw.githubusercontent.com/github/explore/main/topics/${stack.toLowerCase()}/${stack.toLowerCase()}.png`}
-                alt={stack}
-                className="w-6 h-6"
-              />
+            <div key={index} className="badge badge-outline">
+              {stack}
             </div>
           ))}
         </div>

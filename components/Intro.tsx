@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
 import { Preahvihear } from '@next/font/google'; // Import Preahvihear font
-
+import { HoverBorderGradient } from "../@/components/ui/hover-border-gradient";
 const preahvihear = Preahvihear({
   weight: '400', // Specify the weight
   style: 'normal', // Specify the style
@@ -82,12 +82,16 @@ const Intro = () => {
       >
         Email Me
       </button>
-      <button 
-        className="px-7 py-4 bg-transparent border-2 border-zinc-500 hover:bg-zinc-700 text-zinc-500 hover:text-white font-bold rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-lg"
+      <HoverBorderGradient
+       containerClassName="rounded-lg"
+       as="button"
+       className="px-7 py-4 bg-transparent border-2 border-zinc-500 hover:bg-zinc-700 text-zinc-500 hover:text-white font-bold rounded-lg shadow-md transition duration-300 ease-in-out hover:shadow-lg"
         onClick={() => { window.open('https://docs.google.com/document/d/12ZUaRv-R21M4EqOMMT3_QknS7i2-nDhB5TJet82012c/edit?usp=sharing', '_blank'); }}
       >
-        Download CV
-      </button>
+      <span>Download CV</span>
+        
+      
+      </HoverBorderGradient>
           </div>
         </div>
         <div className="flex-shrink-0 mt-6 md:mt-0 md:ml-8 flex flex-col items-center">

@@ -1,20 +1,20 @@
+
 import React, { useState, useEffect } from 'react';
+
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import Header from '../components/Header';
+
 import Intro from '../components/Intro';
-import Experience from '../components/Experience';
-import About from '../components/About';
+
 import Projects from '../components/Projects';
-import Footer from '../components/Footer';
+
 import Testimonial from '../components/Testimonial';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Certificates from '../components/Certificates';
-import TechStack from '../components/TechStack';
+
+import LampDemo from '../components/About/About1';
+
 import Spline from '@splinetool/react-spline';
-import arrow from '/public/arrow.svg'; // Update the path if necessary
-import { FaArrowDown, FaReact, FaLinkedin, FaFacebook, FaNodeJs, FaNextJs } from 'react-icons/fa'; // Example icons, adjust as needed
+
 const comments = [
   {
     comment: 'This is a fantastic product. I love it!',
@@ -83,9 +83,10 @@ const HomePage = () => {
         <br />
         <br />
         <br />
-        <Experience />
-        <Certificates />
+        <LampDemo />
         <Projects />
+
+
         <Testimonial comments={comments} />
       </motion.main>
 
