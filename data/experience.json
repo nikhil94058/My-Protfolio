@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Expresso",
+    "image": "/expresso.png",
+    "datatype": "exep",
+    "role": "Frontend Developer",
+    "description": "Crafting delightful user interfaces for web applications.",
+    "link": "https://github.com/nikhil94058/prot"
+  },
+  {
+    "title": "nit Patna Tnp",
+    "image": "/nitp.png",
+    "datatype": "exep",
+    "role": "Designer",
+    "description": "Designing impactful visual communication.",
+    "link": "https://github.com/nikhil94058/prot"
+  },
+  {
+    "title": "GDSC",
+    "image": "/expresso.png",
+    "datatype": "exep",
+    "role": "DSA Team member",
+    "description": "Advancing data structures and algorithms.",
+    "link": "https://github.com/nikhil94058/prot"
+  },
+  {
+    "title": "Hackslash",
+    "image": "/hackslash.png",
+    "datatype": "exep",
+    "role": "Blockchain",
+    "description": "Building secure and scalable blockchain solutions.",
+    "link": "https://github.com/nikhil94058/prot"
+  }
+]
